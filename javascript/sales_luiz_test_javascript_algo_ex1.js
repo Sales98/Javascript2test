@@ -94,11 +94,11 @@ function F12() {
         new_array[j] = array_number[j].split(" ");
     }
     table = document.getElementById("to_be_verified"); // passing the table to HTML
-    for(var j = 0, k = 0; j < table.rows.length, k < new_array.length; j++, k++){//adding rows to the table
+    for(var j = 0, k = 0; j < table.myCurrentRow.length, k < new_array.length; j++, k++){ //adding rows to the table
 
-    for(var i = 0, l = 0; i < table.rows[i].cells.length, l < new_array[k].length; i++, l++){ //adding cells to the inside of the rows
+    for(var i = 0, l = 0; i < table.myCurrentRow[i].myCurrentCell.length, l < new_array[k].length; i++, l++){ //adding cells to the inside of the rows
    
-      table.rows[j].cells[i].innerHTML = new_arr[k][l];
+      table.myCurrentRow[j].myCurrentCell[i].innerHTML = new_array[k][l];
     }
 }
 }
